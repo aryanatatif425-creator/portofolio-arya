@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ... (Tailwind imports tetap di atas) ... */
+
+/* Transisi Antar Halaman */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.6s ease-in-out;
+  filter: blur(0);
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(10px); /* Efek blur saat ganti halaman */
+  transform: scale(0.98);
+}
